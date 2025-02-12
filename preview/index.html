@@ -68,21 +68,15 @@
         const inputArea = document.getElementById('input-area');
         const preview = document.getElementById('preview');
 
-        // Make sure elements exist before adding event listeners
         if (inputArea && preview) {
             inputArea.addEventListener('input', function() {
                 let text = this.value;
-                
-                // Replace all emoji codes with their corresponding images
                 Object.keys(emojiMap).forEach(code => {
                     const regex = new RegExp(code, 'g');
                     text = text.replace(regex, emojiMap[code]);
                 });
-                
                 preview.innerHTML = text;
             });
-        } else {
-            console.error('Required elements not found!');
         }
     </script>
 </body>
