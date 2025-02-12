@@ -25,6 +25,7 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
+            resize: vertical;
         }
         #preview {
             min-height: 100px;
@@ -32,6 +33,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             margin-top: 20px;
+            white-space: pre-wrap;
         }
         .emoji-list {
             margin-top: 20px;
@@ -66,17 +68,22 @@
         const inputArea = document.getElementById('input-area');
         const preview = document.getElementById('preview');
 
-        inputArea.addEventListener('input', function() {
-            let text = this.value;
-            
-            // Replace all emoji codes with their corresponding images
-            Object.keys(emojiMap).forEach(code => {
-                const regex = new RegExp(code, 'g');
-                text = text.replace(regex, emojiMap[code]);
+        // Make sure elements exist before adding event listeners
+        if (inputArea && preview) {
+            inputArea.addEventListener('input', function() {
+                let text = this.value;
+                
+                // Replace all emoji codes with their corresponding images
+                Object.keys(emojiMap).forEach(code => {
+                    const regex = new RegExp(code, 'g');
+                    text = text.replace(regex, emojiMap[code]);
+                });
+                
+                preview.innerHTML = text;
             });
-            
-            preview.innerHTML = text;
-        });
+        } else {
+            console.error('Required elements not found!');
+        }
     </script>
 </body>
 </html>
