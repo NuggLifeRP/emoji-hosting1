@@ -1,0 +1,15 @@
+{
+    "name": "NuggLife Stickers",
+    "publisher": "NuggLife RP",
+    "version": "1.0.0",
+    "stickers": [
+        {
+            "image_file": "stickers/nugg.webp",
+            "emojis": [":nugg:"]
+        },
+        {
+            "image_file": "stickers/nugg2.webp",
+            "emojis": [":nugg2:"]
+        }
+    ]
+}
