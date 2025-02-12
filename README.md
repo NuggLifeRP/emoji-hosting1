@@ -15,3 +15,7 @@ Collection of custom emojis for NuggLife RP.
 ```html
 <img src="https://raw.githubusercontent.com/NuggLifeRP/emoji-assets/main/emojis/nugg2/emoji_nugg.png" alt="Nugg Emoji" width="50" height="50">
 ```
+
+
+## Live Preview Tool
+Try out our emojis using the [live preview tool](https://nuggliferp.github.io/emoji-assets/preview/index.html)
